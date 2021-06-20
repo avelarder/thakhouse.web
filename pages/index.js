@@ -1,6 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -11,15 +10,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Coming soon!
-        </h1>
-      </main>
+      <section className="header">Header or Main Section</section>
+      <section className="introduction">Intro</section>
+      <section className="services">Services</section>
+      <section className="faq">Frequently Asked Questions</section>
+      <section className="contactus">Contact Us</section>
 
       <footer className={styles.footer}>
-        <p>{ new Date().toDateString() }</p>
+        <p>{new Date().toDateString()}</p>
       </footer>
     </div>
-  )
+  );
 }
