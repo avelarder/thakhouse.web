@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-
+import clsx from "clsx";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -10,15 +10,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className="header">Header or Main Section</section>
-      <section className="introduction">Intro</section>
-      <section className="services">Services</section>
-      <section className="faq">Frequently Asked Questions</section>
-      <section className="contactus">Contact Us</section>
-
-      <footer className={styles.footer}>
-        <p>{new Date().toDateString()}</p>
-      </footer>
+      <section className={clsx(styles.section, styles.header)}>
+        Header or Main Section
+      </section>
+      <section className={clsx(styles.section, styles.introduction)}>
+        Intro
+      </section>
+      <section className={clsx(styles.section, styles.services)}>
+        Services
+      </section>
+      <section className={clsx(styles.section, styles.faq)}>
+        Frequently Asked Questions
+      </section>
+      <section className={clsx(styles.section, styles.contactus)}>
+        Contact Us
+      </section>
     </div>
   );
 }
