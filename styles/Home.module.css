@@ -11,17 +11,48 @@
 }
 
 .header {
-  background-color: rgb(36, 164, 138);
+  background-color: rgb(17, 13, 21);
 }
 .introduction {
-  background-color: rgb(218, 107, 34);
+  background-color: rgb(87, 29, 79);
 }
 .services {
-  background-color: rgb(41, 65, 202);
+  background-color: rgb(204, 47, 120);
 }
 .faq {
-  background-color: rgb(255, 91, 121);
+  background-color: rgb(31, 213, 220);
 }
 .contactus {
-  background-color: rgb(202, 65, 230);
+  background-color: rgb(39, 38, 39);
+}
+
+.comingsoon {
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.waiting {
+  height: 50vh;
+}
+
+.containerday,
+.containerhour,
+.containerminute,
+.containersecond {
+}
+
+.day,
+.hour,
+.minute,
+.second {
+  font-size: 3rem;
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }

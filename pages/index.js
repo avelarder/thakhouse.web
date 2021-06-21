@@ -1,7 +1,41 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import clsx from "clsx";
+import React, { useEffect, useState } from "react";
+
+const countdown = () => {
+  const countDate = new Date("July 28, 2021 00:00:00").getTime();
+  const now = new Date().getTime();
+
+  const gap = countDate - now;
+
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+
+  const textDay = Math.floor(gap / day);
+  const textHour = Math.floor((gap % day) / hour);
+  const textMinute = Math.floor((gap % hour) / minute);
+  const textSecond = Math.floor((gap % minute) / second);
+
+  return {
+    day: textDay,
+    hour: textHour,
+    minute: textMinute,
+    second: textSecond,
+  };
+};
+
 export default function Home() {
+  const [timer, setTimer] = useState({});
+
+  useEffect(() => {
+    setInterval(() => {
+      setTimer(countdown());
+    }, 1000);
+  }, [timer]);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -11,7 +45,34 @@ export default function Home() {
       </Head>
 
       <section className={clsx(styles.section, styles.header)}>
-        Header or Main Section
+        <div className={styles.comingsoon}>
+          <div>
+            <h2>Coming soon</h2>
+            <div className={styles.countdown}>
+              <div className={styles.containerday}>
+                <h3 className={styles.day}>Day</h3>
+                <h3>{timer.day}</h3>
+              </div>
+              <div className={styles.containerhour}>
+                <h3 className={styles.hour}>Hour</h3>
+                <h3>{timer.hour}</h3>
+              </div>
+              <div className={styles.containerminute}>
+                <h3 className={styles.minute}>Minute</h3>
+                <h3>{timer.minute}</h3>
+              </div>
+              <div className={styles.containersecond}>
+                <h3 className={styles.second}>Second</h3>
+                <h3>{timer.second}</h3>
+              </div>
+            </div>
+          </div>
+          <img
+            className={styles.waiting}
+            src="under-construction.png"
+            alt="calendar"
+          ></img>
+        </div>
       </section>
       <section className={clsx(styles.section, styles.introduction)}>
         Intro
