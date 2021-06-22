@@ -44,7 +44,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className={clsx(styles.section, styles.header)}>
+      <section className={clsx(styles.section, styles.fullpageSection)}>
         <div className={styles.comingsoon}>
           <div>
             <h2>Coming soon</h2>
@@ -74,17 +74,17 @@ export default function Home() {
           ></img>
         </div>
       </section>
-      <section className={clsx(styles.section, styles.introduction)}>
-        Intro
+      <section className={clsx(styles.section, styles.fullpageSection)}>
+        <div>Intro</div>
       </section>
-      <section className={clsx(styles.section, styles.services)}>
-        Services
+      <section className={clsx(styles.section, styles.fullpageSection)}>
+        <div>Services</div>
       </section>
-      <section className={clsx(styles.section, styles.faq)}>
-        Frequently Asked Questions
+      <section className={clsx(styles.section, styles.fullpageSection)}>
+        <div>Frequently Asked Questions</div>
       </section>
-      <section className={clsx(styles.section, styles.contactus)}>
-        Contact Us
+      <section className={clsx(styles.section, styles.fullpageSection)}>
+        <div>Contact Us</div>
       </section>
     </div>
   );

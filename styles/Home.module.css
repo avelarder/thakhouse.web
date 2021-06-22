@@ -1,33 +1,42 @@
 .container {
-  /* min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;*/
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
 
-.header {
-  background-color: rgb(17, 13, 21);
-}
-.introduction {
-  background-color: rgb(87, 29, 79);
-}
-.services {
-  background-color: rgb(204, 47, 120);
-}
-.faq {
-  background-color: rgb(31, 213, 220);
-}
-.contactus {
-  background-color: rgb(39, 38, 39);
+.fullpageSection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
 }
 
+.container .fullpageSection:nth-child(1) {
+  background: rgb(53, 55, 54) Url(/bg1.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container .fullpageSection:nth-child(2) {
+  background: rgb(28, 48, 157) Url(/bg1.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container .fullpageSection:nth-child(3) {
+  background: rgb(161, 18, 169) Url(/bg1.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container .fullpageSection:nth-child(4) {
+  background: rgb(199, 169, 0) Url(/bg1.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container .fullpageSection:nth-child(5) {
+  background: rgb(0, 238, 255) Url(/bg1.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
 .comingsoon {
-  /* min-height: 100vh; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -36,12 +45,6 @@
 
 .waiting {
   height: 50vh;
-}
-
-.containerday,
-.containerhour,
-.containerminute,
-.containersecond {
 }
 
 .day,
