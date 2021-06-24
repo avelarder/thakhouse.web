@@ -47,7 +47,9 @@ export default function Home() {
       <section className={clsx(styles.section, styles.fullpageSection)}>
         <div className={styles.comingsoon}>
           <div>
-            <h2>Coming soon</h2>
+            <div>
+              <h2>Coming soon</h2>
+            </div>
             <div className={styles.countdown}>
               <div className={styles.containerday}>
                 <h3 className={styles.day}>Day</h3>
